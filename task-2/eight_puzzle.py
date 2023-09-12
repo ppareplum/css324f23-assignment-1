@@ -51,4 +51,12 @@ def h1(s):
 def h3(s):
     # implement this function
     board, _, _ = s
-    return 0
+
+    res = 0;
+    for idx in range(0, 9):
+        if(board[idx]!=0):
+            if((board[idx]-1)//3 != idx//3):
+                res+=1
+            if((board[idx]-1)%3 != idx%3):
+                res+=1
+    return res;
